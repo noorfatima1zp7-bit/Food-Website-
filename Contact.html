@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Steak House</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Steakhouse - Navbar Debug</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+/* /* } */
+.main {
+  display: flex;
+  /* background-color: transparent !important; */
+  cursor: pointer;
+} */
+
+.logo {
+  font-family: "Arial Black";
+  font-size: larger;
+  color: rgb(192, 21, 21);
+}
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      scroll-behavior: smooth;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      text-transform: uppercase;
+      /* color: black !important; */
+    }
+  /* Hide cross icon by default */
+  .navbar-toggler .close-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    line-height: 1;
+  }
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+.list ul li {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+
+.nav-link:hover {
+  color: rgb(192, 21, 21) !important;
+
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.navbar-brand{
+  color: rgb(192, 21, 21) !important;
+}
+.carousel {
+  margin-bottom: 0 !important;
+}
+.carousel-item img {
+  height: 100vh;       /* full screen height */
+  object-fit: cover;   /* crop instead of squish */
+}
+
+.but {
+  background-color: rgb(192, 21, 21);
+  color: white;
+  border: none;
+  /* padding: px 25px; */
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.but:hover {
+  background-color: #111111e7;
+}
+
+    /* Custom hamburger (guaranteed to show) */
+    .navbar-toggler-icon-custom {
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+      position: relative;
+    }
+    .navbar-toggler-icon-custom span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      display: block;
+      transition: transform .25s ease, opacity .25s ease;
+    }
+    .navbar-toggler-icon-custom span:nth-child(1) { top: 0; }
+    .navbar-toggler-icon-custom span:nth-child(2) { top: 9px; }
+    .navbar-toggler-icon-custom span:nth-child(3) { top: 18px; }
+
+    /* Animated to X when .active added to button */
+    .navbar-toggler.active .navbar-toggler-icon-custom span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .navbar-toggler.active .navbar-toggler-icon-custom span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .navbar-toggler.active .navbar-toggler-icon-custom span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Small spacing tweak */
+    .nav-link { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<!-- ===== Navbar (correct structure) ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">STEAKHOUSE</a>
+
+    <!-- NOTE: We do NOT use data-bs-toggle here; we control via JS to avoid conflicts -->
+    <button class="navbar-toggler" type="button"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon-custom" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item mx-2"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Menu.html">Menu</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="About.html">About Us</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Services.html">Services</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Contact.html">Contact</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="signup.html">Sign Up</a></li>
+
+        <!-- social icons -->
+        <li class="nav-item mx-1"><a class="nav-link" href="#"><i class="bi bi-facebook"></i></a></li>
+        <li class="nav-item mx-1"><a class="nav-link" href="#"><i class="bi bi-twitter"></i></a></li>
+        <li class="nav-item mx-1"><a class="nav-link" href="#"><i class="bi bi-instagram"></i></a></li>
+      </ul>
+
+      <!-- Add to cart button -->
+      <button type="button" class="btn btn-danger btn-lg ms-3" data-bs-toggle="modal" data-bs-target="#cartModal">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Cart Modal ===== -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">My Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Your cart is empty.</p>
+        <a href="Menu.html" class="btn btn-danger">Return to Menu</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle JS (includes Popper & Collapse) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Robust JS to control collapse & toggler -->
+<script>
+  (function () {
+    const navbarCollapse = document.getElementById('navbarNav');
+    const toggler = document.querySelector('.navbar-toggler');
+
+    // Create a Collapse instance but do NOT auto-toggle on init
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+    // Toggle collapse when toggler clicked
+    toggler.addEventListener('click', () => {
+      bsCollapse.toggle(); // open/close
+    });
+
+    // Sync toggler visual state + aria-expanded with collapse events
+    navbarCollapse.addEventListener('shown.bs.collapse', () => {
+      toggler.classList.add('active');
+      toggler.setAttribute('aria-expanded', 'true');
+    });
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+      toggler.classList.remove('active');
+      toggler.setAttribute('aria-expanded', 'false');
+    });
+
+    // Auto-close when a nav-link is clicked (only on mobile when toggler visible)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const togglerVisible = window.getComputedStyle(toggler).display !== 'none';
+        if (navbarCollapse.classList.contains('show') && togglerVisible) {
+          bsCollapse.hide();
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
+  
+      
+<!-- Navbar completed -->
+
+
+
+</html>
+  <style>
+    .contact-card {
+      background: #111;
+      color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      /* box-shadow: 0 0 25px rgba(220, 53, 69, 0.5); */
+    }
+    .form-control, .btn {
+      border-radius: 8px;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+      border: none;
+    }
+    .btn-danger:hover {
+      background-color: #bb2d3b;
+    }
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(220, 53, 69, 0.3);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<div class="branches-section bg-dark">
+  <h2 class="branches-heading ">Our Locations</h2>
+  <div class="branches-cards">
+    
+    <a href="https://goo.gl/maps/yourKarachiLink" target="_blank" class="branch-card">
+      <h3>Karachi</h3>
+      <p>Main Boulevard, Clifton</p>
+    </a>
+
+    <a href="https://goo.gl/maps/yourLahoreLink" target="_blank" class="branch-card">
+      <h3>Lahore</h3>
+      <p>MM Alam Road, Gulberg</p>
+    </a>
+
+    <a href="https://goo.gl/maps/yourIslamabadLink" target="_blank" class="branch-card">
+      <h3>Islamabad</h3>
+      <p>Blue Area, F-7</p>
+    </a>
+
+    <a href="https://goo.gl/maps/yourFaisalabadLink" target="_blank" class="branch-card">
+      <h3>Faisalabad</h3>
+      <p>D-Ground, Peoples Colony</p>
+    </a>
+
+  </div>
+</div>
+
+<style>
+.branches-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #111111d0; /* black background */
+  color: white;
+}
+
+.branches-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #dc3545; /* red */
+}
+
+.branches-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.branch-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.74);
+  color: aliceblue;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4); /* strong shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card h3 {
+  color: #dc3545; /* red heading */
+  margin-bottom: 10px;
+}
+
+.branch-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 35px rgba(220, 53, 69, 0.6); /* red glow effect */
+}
+</style>
+
+
+<body class="bg-dark text-light">
+
+
+      <!-- Contact Form -->
+      <div class="col-lg-7 mx-auto">
+        <div class="contact-card">
+          <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="_captcha" value="false"> 
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html"> <!-- Redirect after success -->
+            
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <input type="text" name="subject" class="form-control" placeholder="Subject">
+              </div>
+              <div class="col-12">
+                <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-danger px-2 py-2 fw-bold" style="background-color: rgb(192, 21, 21);">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .cont{
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
