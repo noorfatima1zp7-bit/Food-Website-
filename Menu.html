@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steak House Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Steakhouse - Navbar Debug</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+</style>
+
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+/* /* } */
+.main {
+  display: flex;
+  /* background-color: transparent !important; */
+  cursor: pointer;
+} */
+
+.logo {
+  /* font-family: "Arial Black"; */
+  /* font-size: larger; */
+  color: rgb(192, 21, 21);
+}
+    body {
+      /* font-family: Arial, sans-serif; */
+      background: #fff;
+      color: #000;
+      scroll-behavior: smooth;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      text-transform: uppercase;
+      /* color: transparent !important; */
+    }
+  /* Hide cross icon by default */
+  .navbar-toggler .close-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    line-height: 1;
+  }
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+.list ul li {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+
+.nav-link:hover {
+  color: rgb(192, 21, 21) !important;
+
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.navbar-brand{
+  color: rgb(192, 21, 21) !important;
+}
+.but {
+  background-color: rgb(192, 21, 21);
+  color: white;
+  border: none;
+  /* padding: px 25px; */
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.but:hover {
+  background-color: #111111e7;
+}
+
+    /* Custom hamburger (guaranteed to show) */
+    .navbar-toggler-icon-custom {
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+      position: relative;
+    }
+    .navbar-toggler-icon-custom span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      display: block;
+      transition: transform .25s ease, opacity .25s ease;
+    }
+    .navbar-toggler-icon-custom span:nth-child(1) { top: 0; }
+    .navbar-toggler-icon-custom span:nth-child(2) { top: 9px; }
+    .navbar-toggler-icon-custom span:nth-child(3) { top: 18px; }
+
+    /* Animated to X when .active added to button */
+    .navbar-toggler.active .navbar-toggler-icon-custom span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .navbar-toggler.active .navbar-toggler-icon-custom span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .navbar-toggler.active .navbar-toggler-icon-custom span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Small spacing tweak */
+    .nav-link { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<!-- ===== Navbar (correct structure) ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">STEAKHOUSE</a>
+
+    <!-- NOTE: We do NOT use data-bs-toggle here; we control via JS to avoid conflicts -->
+    <button class="navbar-toggler" type="button"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon-custom" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item mx-2"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Menu.html">Menu</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="About.html">About Us</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Services.html">Services</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="Contact.html">Contact</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="signup.html">Sign Up</a></li>
+
+        <!-- social icons -->
+        <li class="nav-item mx-1"><a class="nav-link" href="#"><i class="bi bi-facebook"></i></a></li>
+        <li class="nav-item mx-1"><a class="nav-link" href="#"><i class="bi bi-twitter"></i></a></li>
+        <li class="nav-item mx-1"><a class="nav-link" href="#"><i class="bi bi-instagram"></i></a></li>
+      </ul>
+
+      <!-- Add to cart button -->
+      <button type="button" class="btn btn-danger btn-lg ms-3" data-bs-toggle="modal" data-bs-target="#cartModal">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Cart Modal ===== -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">My Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Your cart is empty.</p>
+        <a href="Menu.html" class="btn btn-danger">Return to Menu</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Bundle JS (includes Popper & Collapse) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Robust JS to control collapse & toggler -->
+<script>
+  (function () {
+    const navbarCollapse = document.getElementById('navbarNav');
+    const toggler = document.querySelector('.navbar-toggler');
+
+    // Create a Collapse instance but do NOT auto-toggle on init
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+    // Toggle collapse when toggler clicked
+    toggler.addEventListener('click', () => {
+      bsCollapse.toggle(); // open/close
+    });
+
+    // Sync toggler visual state + aria-expanded with collapse events
+    navbarCollapse.addEventListener('shown.bs.collapse', () => {
+      toggler.classList.add('active');
+      toggler.setAttribute('aria-expanded', 'true');
+    });
+    navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+      toggler.classList.remove('active');
+      toggler.setAttribute('aria-expanded', 'false');
+    });
+
+    // Auto-close when a nav-link is clicked (only on mobile when toggler visible)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const togglerVisible = window.getComputedStyle(toggler).display !== 'none';
+        if (navbarCollapse.classList.contains('show') && togglerVisible) {
+          bsCollapse.hide();
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
+
+
+
+
+   <!-- navbar completed        -->
+  <style>
+.card img{
+  animation: scrolling linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%;
+}
+@keyframes scrolling{
+  from{
+opacity: 0;
+transform: translateX(-100px);
+  }
+  to{
+opacity: 1;
+transform: translateX(0px);
+  }
+}
+
+
+
+    .menu-banner {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('menu-banner.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .menu-banner h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ff0000;
+    }
+    .menu-banner p {
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .col:hover{
+    transform: translateY(-20px);
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <section style="background-color: black; position: sticky;" class="menu-banner">
+    <h1 style="color: rgb(192, 21, 21);">Our Delicious Menu</h1>
+    <!-- <p>Redefining the taste of Steaks with Love </p> -->
+  </section>
+<style>
+  html {
+  scroll-behavior:auto;
+}
+
+</style>
+  <div class="container py-5">
+
+    <!-- Starters -->
+    <h2 class="text-center mb-4 fw-bold text-danger" style="color: rgb(192, 21, 21);">Starters</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="garlic bread.jpg" class="card-img-top" alt="Garlic Bread">
+          <div class="card-body text-center">
+            <h5 class="card-title">Garlic Bread</h5>
+            <p class="text-danger fw-bold">Rs.499</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="chicken-wings.jpg" class="card-img-top" alt="Chicken Wings">
+          <div class="card-body text-center">
+            <h5 class="card-title">Crispy Chicken Wings</h5>
+            <p class="text-danger fw-bold">Rs.899</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="mozrealla sticks.jpg" class="card-img-top" alt="Mozzarella Sticks">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mozzarella Sticks</h5>
+            <p class="text-danger fw-bold">Rs.749</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="cheese nachos.jpg" class="card-img-top" height="300" alt="Cheese Nachos">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cheese Nachos</h5>
+            <p class="text-danger fw-bold">Rs.699</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="Stuffed-Mushrooms.webp" class="card-img-top" alt="Stuffed Mushrooms">
+          <div class="card-body text-center">
+            <h5 class="card-title">Stuffed Mushrooms</h5>
+            <p class="text-danger fw-bold">Rs.799</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="french-fries.jpg" class="card-img-top" alt="French Fries">
+          <div class="card-body text-center">
+            <h5 class="card-title">French Fries</h5>
+            <p class="text-danger fw-bold">Rs.399</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Steaks -->
+    <h2 class="text-center my-5 fw-bold text-danger" style="color: rgb(192, 21, 21);">Our Special Steaks</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- 12 Steaks -->
+      <div class="col"><div class="card shadow-sm"><img src="Ribeye-Steak.jpg" class="card-img-top"><div class="card-body text-center"><h5>Ribeye Steak</h5><p class="text-danger fw-bold">Rs.3599</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="sirlion stake.jpg" class="card-img-top"><div class="card-body text-center"><h5>Sirloin Steak</h5><p class="text-danger fw-bold">Rs.2999</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="T bone steak.webp" class="card-img-top"><div class="card-body text-center"><h5>T-Bone Steak</h5><p class="text-danger fw-bold">Rs.3899</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="Filet-Mignon.webp" class="card-img-top"><div class="card-body text-center"><h5>Filet Mignon</h5><p class="text-danger fw-bold">Rs.4199</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="porter house.jpg" class="card-img-top"><div class="card-body text-center"><h5>Porterhouse Steak</h5><p class="text-danger fw-bold">Rs.4299</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="bbq stake.jpg" class="card-img-top"><div class="card-body text-center"><h5>BBQ Steak</h5><p class="text-danger fw-bold">Rs.4999</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="flank.jpg" class="card-img-top"><div class="card-body text-center"><h5>Flank Steak</h5><p class="text-danger fw-bold">Rs.2699</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="hanger-steak.jpeg" class="card-img-top"><div class="card-body text-center"><h5>Hanger Steak</h5><p class="text-danger fw-bold">Rs.2899</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="Rump steak.webp" class="card-img-top"><div class="card-body text-center"><h5>Rump Steak</h5><p class="text-danger fw-bold">Rs.2599</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="flat-iron-steak.jpg" class="card-img-top"><div class="card-body text-center"><h5>Flat Iron Steak</h5><p class="text-danger fw-bold">Rs.2799</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="new-york-strip-steak.jpg"   height="400"  class="card-img-top"><div class="card-body text-center"><h5>New York Strip</h5><p class="text-danger fw-bold">Rs.3299</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="wagyu-steaks.jpg" class="card-img-top"><div class="card-body text-center"><h5>Wagyu Steak</h5><p class="text-danger fw-bold">Rs.8999</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+    </div>
+
+    <!-- Desserts -->
+    <h2 class="text-center my-5 fw-bold text-danger" style="color: rgb(192, 21, 21);">Desserts</h2>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col"><div class="card shadow-sm"><img src="chocolate-cake.jpg" height="400" class="card-img-top"><div class="card-body text-center"><h5>Chocolate Cake</h5><p class="text-danger fw-bold">Rs.699</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="ny cake.jpg" height="300" class="card-img-top"><div class="card-body text-center"><h5>New York Cheesecake</h5><p class="text-danger fw-bold">Rs.849</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="Brownie.jpg" class="card-img-top"><div class="card-body text-center"><h5>Chocolate Brownie</h5><p class="text-danger fw-bold">Rs.549</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="vanilla.jpg" class="card-img-top"><div class="card-body text-center"><h5>Vanilla Ice Cream</h5><p class="text-danger fw-bold">Rs.499</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="lava-cakes.webp" class="card-img-top"><div class="card-body text-center"><h5>Molten Lava Cake</h5><p class="text-danger fw-bold">Rs.899</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="caramel.webp" class="card-img-top"><div class="card-body text-center"><h5>Caramel Pudding</h5><p class="text-danger fw-bold">Rs.699</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="tiramisu.webp" class="card-img-top"><div class="card-body text-center"><h5>Tiramisu</h5><p class="text-danger fw-bold">Rs.999</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+      <div class="col"><div class="card shadow-sm"><img src="donuts.jpg" class="card-img-top"><div class="card-body text-center"><h5>Assorted Donuts</h5><p class="text-danger fw-bold">Rs.649</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+      </div></div></div>
+    </div>
+
+    <!-- Cold Drinks -->
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold" style="color: rgb(192, 21, 21);">Cold Drinks</h2>
+
+    <div class="row">
+
+      <!-- Drink 1 -->
+      <div class="col-md-3 col">
+        <div class="card m-2 shadow-sm">
+          <img src="coca-cola.webp" class="card-img-top" alt="Coca Cola" height="350" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Coca Cola</h5>
+            <p class="text-danger fw-bold">Rs.120</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink 2 -->
+      <div class="col-md-3 col">
+        <div class="card m-2 shadow-sm">
+          <img src="pepsi.webp" class="card-img-top" alt="Pepsi" height="350" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pepsi</h5>
+            <p class="text-danger fw-bold">Rs.120</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink 3 -->
+      <div class="col-md-3 col">
+        <div class="card m-2 shadow-sm">
+          <img src="sprite-bottle.webp" class="card-img-top" alt="Sprite" height="350" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sprite</h5>
+            <p class="text-danger fw-bold">Rs.110</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink 4 -->
+      <div class="col-md-3 col">
+        <div class="card m-2 shadow-sm">
+          <img src="fanta.webp" class="card-img-top" alt="Fanta" height="350" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fanta</h5>
+            <p class="text-danger fw-bold">Rs.110</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink 5 -->
+      <div class="col-md-3 col h-100">
+        <div class="card m-2 shadow-sm">
+          <img src="7 up 2.webp" class="card-img-top" alt="7UP" height="250" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">7UP</h5>
+            <p class="text-danger fw-bold">Rs.110</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink 6 -->
+      <div class="col-md-3 col">
+        <div class="card m-2 shadow-sm">
+          <img src="mountain-dew.webp" class="card-img-top" alt="Mountain Dew" height="350" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dew</h5>
+            <p class="text-danger fw-bold">Rs.130</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink 7 -->
+      <div class="col-md-3 col">
+        <div class="card m-2 shadow-sm">
+          <img src="red bull.webp" class="card-img-top" alt="Red Bull" height="350" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Red Bull</h5>
+            <p class="text-danger fw-bold">Rs.250</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drink 8 -->
+      <div class="col-md-3 col">
+        <div class="card m-2 shadow-sm">
+          <img src="sting.webp" class="card-img-top" alt="Sting" height="350" style="object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sting</h5>
+            <p class="text-danger fw-bold">Rs.150</p>
+            <button type="button" class="btn btn-danger">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="text-light d-flex align-items-center" style="min-height: 60vh;">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      
+      <!-- Heading -->
+      <div class="col-12 mt-4 mb-4">
+        <h2 class="fw-bold text-danger">We Value Your Feedback</h2>
+        <p class="lead">Help us improve our Stake Website by sharing your thoughts.</p>
+      </div>
+      
+      <!-- Feedback Form -->
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control form-control-lg" rows="4" placeholder="Your Feedback" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg w-100">Submit Feedback</button>
+        </form>
+      </div>
+      
+    </div>
+
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
